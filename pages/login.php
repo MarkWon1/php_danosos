@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>LOGIN</h1>
-    <form action="">
-        <input type="text" id="username" class="username" name="username" placeholder="username">
+    <h1>Login</h1>
+    <form action="functions/loginFunction.php" method="POST">
+       <div class="div1"> <input type="text" id="username" class="username" name="username" placeholder="username">
         <input type="password" id="password" class="password" name="password" placeholder="password">
-        <button type="submit">Submit</button>
+        <button type="submit">Log in</button></div>
+        </div>
     </form>
-   
+    
+  <div> <button type="submit">Creat New Account</button></div>
+   <a href="#" class="fogetlink">Forget Password</a>
 </body>
 </html>
