@@ -1,6 +1,7 @@
 <?php
-$list =['Leo', 'Sangwon', 'Arno', 'Anxin', 'Heli', 'Solon', 'Shion', 'Niki', 'Markwon', 'Dex', 'Shade'];
+include "../config/includes.php";
 
+$list = retriveALLusers();
 ?>
 
 
@@ -13,54 +14,48 @@ $list =['Leo', 'Sangwon', 'Arno', 'Anxin', 'Heli', 'Solon', 'Shion', 'Niki', 'Ma
 include "resources/header.php";
 
 ?>
+
 <body>
       <?php
-include "resources/navigation.php";
+      include "resources/navigation.php";
 
-?>
+      ?>
 
-<h1>This Is Retrieve Page!!!</h1>
-<ul>
-<?php
-      foreach($list as $item){
-
-?>
-
-
-      <li> <?= $item?> </li>
-
-
-<?php
-      }
-?>
-</ul>
+      <h1>This Is Retrieve Page!!!</h1>
 
       <table>
             <tr>
                   <th>Name</th>
+                  <th>Age</th>
+                  <th>Address</th>
+                  <th>Username</th>
                   <th>Action</th>
             </tr>
 
-      
-     
-<?php
-      foreach($list as $item){
-
-?>
 
 
-      <tr>
-            <td><?=  $item ?></td>
-            <td><button>View</button></td>
-      </tr>
+            <?php
+            foreach ($list as $item) {
+
+            ?>
 
 
-<?php
-      }
-?>
+                  <tr>
+                        <td><?= $item["name"] ?></td>
+                        <td><?= $item["age"] ?></td>
+                        <td><?= $item["address"] ?></td>
+                        <td><?= $item["username"] ?></td>
+                        <td><button>View</button></td>
+                  </tr>
+
+
+            <?php
+            }
+            ?>
 
 
 
       </table>
 </body>
+
 </html>
