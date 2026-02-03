@@ -56,6 +56,42 @@ include "resources/header.php";
 
 
       </table>
+
+      
+
+      <table>
+            <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Address</th>
+                  <th>Username</th>
+                  <th>Action</th>
+            </tr>
+
+
+
+            <?php
+            foreach ($list as $item) {
+
+            ?>
+
+
+                  <tr>
+                        <td><?= $item["name"] ?></td>
+                        <td><?= $item["age"] ?></td>
+                        <td><?= $item["address"] ?></td>
+                        <td><?= $item["username"] ?></td>
+                        <td><button>View</button></td>
+                  </tr>
+
+
+            <?php
+            }
+            ?>
+
+
+
+      </table>
 </body>
 
 </html>

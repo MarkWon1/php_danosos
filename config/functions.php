@@ -3,22 +3,22 @@ function retriveALLusers(){
     include "connection.php";
 
     $sql = "SELECT * FROM user";
-    $stmt = $conn -> prepare($sql);
-    $stmt->execute();
+    $stmnt = $conn -> prepare($sql);
+    $stmnt->execute();
 
-    return $stmt->fetchALL(PDO::FETCH_ASSOC);
+    return $stmnt->fetchALL(PDO::FETCH_ASSOC);
 }
 
-function loginAuth($username, $password){
-
+function loginAuth($usernames, $passwords){
+ include "connection.php";
     $sql = "SELECT * FROM user WHERE username = :username AND password = :password ";
-    $stmt = $conn -> prepare($sql);
-    $stmt -> execute([
-        "username" => $username,
-        "password" => $password
+    $stmnt = $conn -> prepare($sql);
+    $stmnt -> execute([
+        "username" => $usernames,
+        "password" => $passwords
     ]);
 
-    $count = $stmt -> rowCount();
+    $count = $stmnt -> rowCount();
 
     return $count;
 
