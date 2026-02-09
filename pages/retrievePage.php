@@ -45,7 +45,9 @@ include "resources/header.php";
                         <td><?= $item["age"] ?></td>
                         <td><?= $item["address"] ?></td>
                         <td><?= $item["username"] ?></td>
-                        <td><button>View</button></td>
+                        <td>
+                              <a href="viewpage.php?user_id=<?= $item['user_id'] ?>">View</a>
+                        </td>
                   </tr>
 
 
@@ -72,7 +74,7 @@ include "resources/header.php";
 
 
             <?php
-            foreach ($productslist as $products) {
+            foreach ($list as $item) {
 
             ?>
 

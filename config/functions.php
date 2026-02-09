@@ -33,7 +33,10 @@ function getUser($user_id)
      $stmnt->execute([
         "id" => $user_id
      ]);
+
+      return $stmnt->fetchAll(PDO::FETCH_ASSOC);
 }
+
 
 
 
@@ -44,7 +47,7 @@ function retriveALLproducts(){
     $stmnt = $conn -> prepare($sql);
     $stmnt->execute();
 
-    return $stmnt->fetchALL(PDO::FETCH_ASSOC);
+    return $stmnt->fetchAll(PDO::FETCH_ASSOC);
 }
  
 
@@ -62,4 +65,31 @@ function getproducts($prod_id){
     return $stmnt->fetchALL(PDO::FETCH_ASSOC);
 }
  
+function updateUser($userID, $name, $age, $address, $usernames, $passwords)
+{
+    include "connection.php";
+
+    $sql = "UPDATE user SET 
+                name= :name, 
+                age= :age, 
+                address= :address, 
+                username= :username, 
+                password= :password
+                WHERE 
+                user_id= :user_id
+                ";
+    $stmnt = $conn->prepare($sql);
+     $stmnt->execute([
+        "name" => $name,
+        "age" => $age,
+        "address" => $address,
+        "username" => $usernames,
+        "password" => $passwords,
+        "user_id" => $userID
+     ]);
+
+      return $stmnt;
+}
 ?>
+
+
