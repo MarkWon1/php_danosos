@@ -47,6 +47,7 @@ include "resources/header.php";
                         <td><?= $item["username"] ?></td>
                         <td>
                               <a href="viewpage.php?user_id=<?= $item['user_id'] ?>">View</a>
+                              <a href="">Delete</a>
                         </td>
                   </tr>
 
@@ -59,7 +60,7 @@ include "resources/header.php";
 
       </table>
 
-      
+      <br><br>
 
       <table>
             <tr>
@@ -74,18 +75,18 @@ include "resources/header.php";
 
 
             <?php
-            foreach ($list as $item) {
+            foreach ($productlist as $product) {
 
             ?>
 
 
                   <tr>
-                        <td><?= $item["prod_name"] ?></td>
-                        <td><?= $item["prod_quantity"] ?></td>
-                        <td><?= $item["prod_type"] ?></td>
-                        <td><?= $item["prod_price"] ?></td>
-                        <td><?= $item["prod_date_added"] ?></td>
-                        <td><a href="viewpage.php?prod_id=<?= $products['prod_id'] ?>">View</a></td>
+                        <td><?= $product["prod_name"] ?></td>
+                        <td><?= $product["prod_quantity"] ?></td>
+                        <td><?= $product["prod_type"] ?></td>
+                        <td><?= $product["prod_price"] ?></td>
+                        <td><?= $product["prod_date_added"] ?></td>
+                        <td><a href="viewpage.php?prod_id=<?= $product['prod_id'] ?>">View</a></td>
                   </tr>
 
 

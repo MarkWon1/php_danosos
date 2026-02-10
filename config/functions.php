@@ -53,7 +53,7 @@ function retriveALLproducts(){
 
 
 
-function getproducts($prod_id){
+function getProduct($prod_id){
     include "connection.php";
 
     $sql = "SELECT * FROM products WHERE prod_id = :id";

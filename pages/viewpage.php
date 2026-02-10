@@ -13,6 +13,21 @@ if (isset($_GET['user_id'])) {
 
 ?>
 
+<?php
+include "../config/includes.php";
+
+if (isset($_GET['prod_id'])) {
+    $prod_id = $_GET['prod_id'];
+    $getProduct = getProduct($_GET['prod_id']);
+    $type = "product";
+
+    echo json_encode($getProduct);
+} else {
+    echo "<script> window.location.href='retrievePage.php'</script>";
+}
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
