@@ -2,6 +2,15 @@
 include "../config/includes.php";
 
 $list = retriveALLusers();
+$productlist = retriveALLproducts();
+
+
+
+if($_GET['status'] == 'ok'){
+      echo "<script> alert('Value Deleted Successfully') </script>";
+}else if ($_GET['status'] == 'no'){
+      echo "<script> alert('Value Deleted Unsuccessfully') </script>";
+}
 ?>
 
 
@@ -47,7 +56,7 @@ include "resources/header.php";
                         <td><?= $item["username"] ?></td>
                         <td>
                               <a href="viewpage.php?user_id=<?= $item['user_id'] ?>">View</a>
-                              <a href="">Delete</a>
+                              <a href="functions/deletefunction.php?deleteFrom=user&id=<?= $item['user_id']?>">Delete</a>
                         </td>
                   </tr>
 
@@ -86,7 +95,9 @@ include "resources/header.php";
                         <td><?= $product["prod_type"] ?></td>
                         <td><?= $product["prod_price"] ?></td>
                         <td><?= $product["prod_date_added"] ?></td>
-                        <td><a href="viewpage.php?prod_id=<?= $product['prod_id'] ?>">View</a></td>
+                        <td><a href="viewpage.php?prod_id=<?= $product['prod_id'] ?>">View</a>
+                        <a href="functions/deletefunction.php?deleteFrom=product&id=<?= $product['prod_id']?>">Delete</a>
+                  </td>
                   </tr>
 
 
