@@ -1,6 +1,6 @@
 <header>
         <nav class="navbar">
-            <div class="logo">Mark <span> Angelo </span> Danosos</div>
+            <div class="logo">Mark <span> Angelo </span> Dañosos</div>
             <ul class="nav-links">
                 <li><a href="dashboard">Home</a></li>
                 <li><a href="createPage">Create</a></li>

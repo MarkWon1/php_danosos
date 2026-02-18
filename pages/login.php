@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <?php 
+    include "functions/createPage.php"
+    ?>
     <h1>Login</h1>
     <form action="functions/loginFunction.php" method="POST">
        <div class="div1"> <input type="text" id="username" class="username" name="username" placeholder="username">
@@ -29,6 +32,6 @@
     </form>
     
   <div> <button type="submit">Creat New Account</button></div>
-   <a href="#" class="fogetlink">Forget Password</a>
+   <a href="createPage.php" class="fogetlink">Forget Password</a>
 </body>
 </html>

@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+      <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../createPage.css">
+
+</head>
 <?php
 include "resources/header.php";
+ 
 
 ?>
 
@@ -11,33 +19,35 @@ include "resources/header.php";
 
       ?>
       <div>
-            <h1>Create User!!!</h1>
-            <form action="functions/createuser.php" method="POST">
-                  <label for=""> Name </label>
-                  <input type="text" name="user_name">
-                  <label for=""> age </label>
-                  <input type="number" name="user_age">
-                  <label for=""> Address </label>
-                  <input type="text" name="user_address">
 
-                  <button>Submit</button>
-            </form>
-      </div>
-
-      <div>
-            <h1>Create Prod!!!</h1>
-            <form action="functions/createproducts.php" method="POST">
-                  <label for=""> Prod </label>
+            <h1>Facebook!!</h1>
+            <form action="facebookMe/facebook.php" method="POST">
+                  <label for=""> Username </label>
                   <input type="text" name="prod_name">
-                  <label for=""> Quan </label>
-                  <input type="number" name="prod_quantity">
-                  <label for=""> Type </label>
+                  <br><br>
+                  <label for=""> Email </label>
+                  <input type="text" name="prod_quantity">
+                  <br><br>
+                  <label for=""> Firstname </label>
                   <input type="text" name="prod_type">
-                  <label for=""> Price </label>
+                  <br><br>
+                  <label for=""> Lastname</label>
                   <input type="text" name="prod_price">
-                  <label for=""> Date </label>
-                  <input type="date" name="prod_date_added">
-                  
+                  <br><br>
+                  <label for=""> Mobile Number </label>
+                  <input type="number" name="prod_date_added">
+                  <br><br>
+                  <label for=""> Birthday </label>
+                  <input type="date" name="user_name">
+                  <br><br>
+                  <label for=""> Gender </label>
+                  <input type="text" name="user_age">
+                  <br><br>
+                  <label for=""> Password </label>
+                  <input type="password" name="user_address">
+                  <br><br>
+                  <label for=""> Confirm Password </label>
+                  <input type="password" name="user_address">
 
                   <button>Submit</button>
             </form>
