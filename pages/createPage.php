@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-      <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../createPage.css">
-
-</head>
 <?php
-include "resources/header.php";
- 
-
+include "resources/header.php"
 ?>
 
 <body>
-      <?php
-      include "resources/navigation.php";
+    <?php
+    include "resources/navigation.php"
+    ?>
 
-      ?>
-      <div>
-
-            <h1>Facebook!!</h1>
-            <form action="facebookMe/facebook.php" method="POST">
-                  <label for=""> Username </label>
-                  <input type="text" name="prod_name">
-                  <br><br>
-                  <label for=""> Email </label>
-                  <input type="text" name="prod_quantity">
-                  <br><br>
-                  <label for=""> Firstname </label>
-                  <input type="text" name="prod_type">
-                  <br><br>
-                  <label for=""> Lastname</label>
-                  <input type="text" name="prod_price">
-                  <br><br>
-                  <label for=""> Mobile Number </label>
-                  <input type="number" name="prod_date_added">
-                  <br><br>
-                  <label for=""> Birthday </label>
-                  <input type="date" name="user_name">
-                  <br><br>
-                  <label for=""> Gender </label>
-                  <input type="text" name="user_age">
-                  <br><br>
-                  <label for=""> Password </label>
-                  <input type="password" name="user_address">
-                  <br><br>
-                  <label for=""> Confirm Password </label>
-                  <input type="password" name="user_address">
-
-                  <button>Submit</button>
-            </form>
-      </div>
+    <div class="">
+        <h1 class="createuser">Create User</h1>
+        <form action="facebook.php" method="POST">
+            <label for="" class="usna">Username</label>
+            <input type="text" name="user name" class="usnas" placeholder="Username">
+            <label for="" class="email">email</label>
+            <input type="text" name="email" class="emails" placeholder="Email">
+            <label for="" class="fname">first_name</label>
+            <input type="text" name="first name" class="fnames" placeholder="First Name">
+            <label for="" class="lname">last_name</label>
+            <input type="text" name="last name" class="lnames" placeholder="Last Name">
+            <label for="" class="mnum">mobile_num</label>
+            <input type="text" name="mobile num" class="mnums" placeholder="Mobile Number">
+            <label for="" class="bdate">birthdate</label>
+            <input type="date" name="birthdate" class="bdates" placeholder="Birthdate">
+            <label for="" class="gender">gender</label>
+            <input type="text" name="gender" class="genders" placeholder="Gender">
+            <label for="" class="password">password</label>
+            <input type="text" name="password" class="passwords" required placeholder="Password">
+            <input type="password" name="confirmpassword" placeholder="Confirm Password" class="passwords" required>
+            <button type="submit" class="savebutton">Save</button>
+        </form>
+    </div>
 </body>
 
 </html>
