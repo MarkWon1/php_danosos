@@ -2,50 +2,18 @@
 
 include "../../config/includes.php";
 
+if (isset($_GET['user_name']) && isset($_POST['password'])) {
 
-
-if (isset($_POST['user_name']) && isset($_POST['email']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['mobile_num']) && isset($_POST['birthdate']) && isset($_POST['gender']) && isset($_POST['password'])) {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $mobilenum = $_POST['mobile num'];
-    $birthdate = $_POST['birthdate'];
-    $gender = $_POST['gender'];
+    $username = $_POST['user_name'];
     $password = $_POST['password'];
-    $confirm = $_POST['confirm password'];
 
-    if ($password !== $confirm) {
-    echo "<script> alert('Passwords do not match. Please try again.')</script>";
-    exit();
-}
+    $result = loginAuth($username, $password);
 
-    $sql = "INSERT INTO facebook_users (username, email, first_name, last_name, mobile_num, birthdate, gender, password)
-            VALUES (
-                :username,
-                :email,
-                :first_name,
-                :last_name,
-                :mobile_num,
-                :birthdate,
-                :gender,
-                :password)";
-
-    $stmnt = $conn->prepare($sql);
-    $stmnt->execute([
-        "username" => $user_name,
-        "email" => $email,
-        "first_name" => $first_name,
-        "last_name" => $last_name,
-        "mobile_num" => $mobile_num,
-        "birthdate" => $birthdate,
-        "gender" => $gender,
-        "password" => $password
-    ]);
-
-    if ($stmnt) {
-        echo "<script> window.location.href = '../login.php'</script>";
-    } else {
-        echo "not save";
+    if ($result == 1) {
+        echo "<script> window.location.href = '../dashboard.php'</script>";
+    }else  {
+        echo "<script> window.location.href = '../login.php?status=false'</script>";
     }
 }
+
+

@@ -26,7 +26,7 @@ if (isset($_GET['status']) && $_GET['status'] == "false") {
         <p class="colorfont2">Connect with friends and the world <br> around you on facebook</p>
     </div>
     <div class="stick2">
-        <form action="functions/dashboard.php" method="POST">
+        <form action="dashboard.php" method="POST">
             <input type="text" id="user_name" class="type1" name="user_name" placeholder="Email or phone number"><br><br>
             <input type="Password" id="password" class="type2" name="password" placeholder="Password"><br><br>
             <button class="click" type="submit">Log in</button>

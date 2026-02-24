@@ -11,7 +11,7 @@ include "resources/header.php"
 
     <div class="">
         <h1 class="createuser">Create User</h1>
-        <form action="facebook.php" method="POST">
+        <form action="functions/createMe.php" method="POST">
             <label for="" class="usna">Username</label>
             <input type="text" name="user name" class="usnas" placeholder="Username">
             <label for="" class="email">email</label>
@@ -28,7 +28,7 @@ include "resources/header.php"
             <input type="text" name="gender" class="genders" placeholder="Gender">
             <label for="" class="password">password</label>
             <input type="text" name="password" class="passwords" required placeholder="Password">
-            <input type="password" name="confirmpassword" placeholder="Confirm Password" class="passwords" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" class="passwords" required>
             <button type="submit" class="savebutton">Save</button>
         </form>
     </div>

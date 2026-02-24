@@ -4,6 +4,7 @@ if (isset($_GET['status']) && $_GET['status'] == "false") {
 }
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +15,8 @@ if (isset($_GET['status']) && $_GET['status'] == "false") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook - Login/Create Account</title>
     <link rel="icon" href="https://tse1.mm.bing.net/th/id/OIP.d9GZxbX8Gi9_qGg7XP1ntgHaHa?pid=Api">
-    <link rel="stylesheet" href="../css/loginstyle.css">
+    <link rel="stylesheet" href="facebook.css">
 </head>
-
 
 
 <body class="stick">
@@ -32,7 +32,7 @@ if (isset($_GET['status']) && $_GET['status'] == "false") {
             <p class="type3">Forgot password?</p>
             <p class="BOTBOT">Create a Page
             <p class="BOTBOT1">for a celebrity, brand or business.</p>
-            <a href="createPage.php" class="click1">Create new account</a>      
+            <a href="createPage.php" class="click1">Create new account</a>
         </form>
 
 
