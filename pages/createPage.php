@@ -23,7 +23,7 @@ include "resources/header.php"
             <label for="" class="mnum">mobile_num</label>
             <input type="text" name="mobile num" class="mnums" placeholder="Mobile Number">
             <label for="" class="bdate">birthdate</label>
-            <input type="date" name="birthdate" class="bdates" placeholder="Birthdate">
+            <input type="date" name="bithday" class="bdates" placeholder="Birthdate">
             <label for="" class="gender">gender</label>
             <input type="text" name="gender" class="genders" placeholder="Gender">
             <label for="" class="password">password</label>
